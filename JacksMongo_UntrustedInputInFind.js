@@ -7,10 +7,17 @@
 
 //db.jacksCollection.find({value:FindNumber(x)});
 
-//app.post('/', function (req, res) { db.users.find({username: req.body.username, password: req.body.password}, function (err, users) { 
-//  var a = req.body.username
-//  }); 
-//});
+var express = require('express'); 
+var session = require('express-session'); 
+var csrf = require('csurf'); 
+ 
+var app = express(); 
 
-var xhr= window.XMLHttpRequest? new XMLHttpRequest() : new ActiveXObject('MSXML2.XMLHttp');
-function (xhr) { db.users.find({username: xhr.body.username, password: xhr.body.password}
+app.post('/', function (req, res) { db.users.find({username: req.body.username, password: req.body.password}, function (err, users) { 
+  var a = req.body.username 
+  }); 
+});
+
+//var xhr= window.XMLHttpRequest? new XMLHttpRequest() : new ActiveXObject('MSXML2.XMLHttp');
+//function (xhr) { db.users.find({username: xhr.body.username, password: xhr.body.password}
+
