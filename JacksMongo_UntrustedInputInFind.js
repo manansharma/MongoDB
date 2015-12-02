@@ -12,4 +12,5 @@
 //  }); 
 //});
 
-function (req, res) { db.users.find({username: req.body.username, password: req.body.password}
+var xhr= window.XMLHttpRequest? new XMLHttpRequest() : new ActiveXObject('MSXML2.XMLHttp');
+function (xhr) { db.users.find({username: xhr.body.username, password: xhr.body.password}
