@@ -7,11 +7,7 @@
 
 //db.jacksCollection.find({value:FindNumber(x)});
 
-var express = require('express'); 
-var session = require('express-session'); 
-var csrf = require('csurf'); 
- 
-var app = express(); 
+
 
 app.post('/', function (req, res) { db.users.find({username: req.body.username, password: req.body.password}, function (err, users) { 
   var a = req.body.username 
